@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+*{
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.dragDiv .column{
+    width: 30%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dragDiv{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.droppable-col{
+    width: 100%;
+    background-color: grey;
+    padding: 10px 10px 0 10px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.item{
+    color: white;
+    margin-bottom: 10px;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 7px;
+    /* background-color: grey; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item.dragging{
+    background-color: grey;
+}
+
+[data-rbd-droppable-id='todo'] {
+    background-color: red;
+}
+  
+[data-rbd-droppable-id='in-progress'] {
+   background-color: orange;
+}
+  
+[data-rbd-droppable-id='done'] {
+  background-color: green;
 }
